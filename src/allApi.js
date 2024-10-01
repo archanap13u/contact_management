@@ -12,6 +12,6 @@ export const deleteContact=async(id)=>{
 return await axios.delete(`${base_url}/contacts/${id}`)
 }
 
-// export const getContactToEdit=async(id)=>{
-//     return await axios.get(`${base_url}/contacts/${id}`)
-// }
+export const getContactToEdit=async(id)=>{
+    return await axios.get(`${base_url}/contacts/${id}`)
+}

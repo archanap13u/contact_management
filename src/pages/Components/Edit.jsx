@@ -26,7 +26,6 @@ function Edit() {
       setvalues({...values,Name:res.data.Name, Phone:res.data.Phone, Email:res.data.Email})
       console.log(values)
      })
-     
 
   },[])
  
@@ -48,18 +47,25 @@ function Edit() {
     })
 
    }
-  //  const getData=async()=>{
-  //   const result=await getContactToEdit()
+  //  const getData=async(id)=>{
+  //   const result=await getContactToEdit(id)
   //   if(result.status==200){
-  //     setvalues(result.data)
+  //     setvalues( setvalues({...values,Name:res.data.Name, Phone:res.data.Phone, Email:res.data.Email}))
   //     console.log(values)
   //   }
   //  }
     
   return (
   <>
+  
   <div className='d-flex justify-content-center align-items-center 'style={{height:'80vh'}}>
+
+    
   <div className='border shadow  w-50  '>
+  <div className=' mb-4 me-3 border rounded' >
+     <Link to={'/dash'}> <button className='btn  border-2 '><i className="fa-solid fa-xmark fa-2xl" size="xl" style={{color: "#63E6BE",}} /></button></Link>
+    </div>
+    <h4 className='text-center mb-4'>Change contact details</h4>
     
   <FloatingLabel
         controlId="floatingInputid"
@@ -76,7 +82,7 @@ function Edit() {
       </FloatingLabel>
       <div className='d-flex justify-content-around mt-5'>
       <Link to={'/dash'} > <button className='btn btn-danger btn-sm ' style={{borderRadius:'30px',padding:'8px 25px'}}>Cancel</button></Link>
-       <Link to={'/dash'}> <button className='btn btn-success btn-sm 'onClick={handleEdit} style={{borderRadius:'30px',padding:'8px 25px'}}>Save</button></Link>
+        <button className='btn btn-success btn-sm 'onClick={handleEdit} style={{borderRadius:'30px',padding:'8px 25px'}}>Save</button>
       </div>
       {/* <div className='mt-5' s>
         <Link to={'/dash'}><button className='btn  border shadow' style={{borderRadius:'30px',padding:'8px 25px'}} ><i className="fa-solid fa-arrow-left fa-xl" size="2xl" style={{color: "#63E6BE",}} /></button></Link></div> */}
