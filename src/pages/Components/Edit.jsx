@@ -59,7 +59,7 @@ function Edit() {
   return (
   <>
   <div className='d-flex justify-content-center align-items-center 'style={{height:'80vh'}}>
-  <div className='border shadow  w-50 p-5 '>
+  <div className='border shadow  w-50  '>
     
   <FloatingLabel
         controlId="floatingInputid"
